@@ -27,7 +27,7 @@ my_apples+my_oranges
 my_fruit<-my_apples+my_oranges
 my_fruit
 
-##iii.select the data type:class()¡Bstr()
+##iii.select the data type:class()ã€str()
 my_numeric <- 60
 my_character <- "Taiwan"
 my_logical <- FALSE
@@ -77,7 +77,7 @@ help("data.frame")
 ##############################
 #Chapter2 Vector
 
-##i.Create Vector c( )¡Bnames()
+##i.Create Vector c( )ã€names()
 codes <- c(380,1240,818)
 codes
 country <-c("Taiwan", "Japan", "Hong Kong")
@@ -132,7 +132,7 @@ earnings+c(10,20,30)
 earnings*c(1,2,3)
 earnings/c(1,2,3)
 
-##useful function(levels()¡Bmin()¡Bmax()¡Bmedian()¡Blength()¡Bprod()¡Bsum()¡Bmean())
+##useful function(levels()ã€min()ã€max()ã€median()ã€length()ã€prod()ã€sum()ã€mean())
 ##levels,min,max
 food <- factor(c("low", "high", "medium", "high", "low", "medium", "high"))
 levels(food)
@@ -144,7 +144,7 @@ levels(food)
 min(food)
 max(food)
 
-#median()¡Blength()¡Bsum()¡Bmean()
+#median()ã€length()ã€sum()ã€mean()
 poker_vector <- c(140, -50, 20, -120, 240)
 median(poker_vector)
 sum(poker_vector)
@@ -337,7 +337,7 @@ star_wars_matrix <- matrix(c(new_hope, empire_strikes, return_jedi),
                            nrow = 3, byrow = TRUE)
 star_wars_matrix
 
-##ii.Recognize "cbind¡Brbind¡Bcolnames¡Brownames¡Bdimnames¡Blettlers¡BLETTERS¡Bdim¡Bsample"
+##ii.Recognize "cbindã€rbindã€colnamesã€rownamesã€dimnamesã€lettlersã€LETTERSã€dimã€sample"
 #cbind,rbind
 cbind(1:3,1:3)
 
@@ -365,7 +365,7 @@ star_wars_matrix <- matrix(box_office, nrow = 3, byrow = TRUE,
                                              "Return of the Jedi"), c("US", "non-US")))
 star_wars_matrix
 
-##lettlers¡BLETTERS
+##lettlersã€LETTERS
 CHAR<-matrix(LETTERS[1:6],nrow = 4,ncol = 3)
 CHAR
 char<-matrix(letters[1:6],nrow = 4,ncol = 3)
@@ -378,7 +378,7 @@ dim(num)
 ##sample
 matrix(sample(1:20),ncol = 2)
 
-##iii.Use cblind¡Brbind and vector to create matrix row and column 
+##iii.Use cblindã€rbind and vector to create matrix row and column 
 m<-matrix(1:6,byrow=TRUE,nrow=2)
 m
 
@@ -456,7 +456,7 @@ m<-matrix(sample(1:10),nrow = 5)
 m
 t(m)
 
-##rowSums()¡BcolSums()
+##rowSums()ã€colSums()
 box_office <- c(360.7, 208.6,310.542, 300.250,302.513, 320.612)
 star_wars_matrix <- matrix(box_office, nrow = 3, byrow = TRUE,
                            dimnames = list(c("A New Hope", "The Empire Strikes Back", 
@@ -492,7 +492,7 @@ df
 df<-data.frame(Name=name,Age=age,Child=child)
 df
 
-##ii.Extend data frame(create row)¡Buse cblind¡Brblind create row and column
+##ii.Extend data frame(create row)ã€use cblindã€rblind create row and column
 name<-c("Anne","Pete","Frank","Julia","Cath")
 age<-c(28,30,21,39,35)
 child<-c(FALSE,TRUE,TRUE,FALSE,TRUE)
@@ -538,7 +538,7 @@ people$age
 people["age"]
 
 
-##v.Sorting:order()¡Brange()¡Bsort()
+##v.Sorting:order()ã€range()ã€sort()
 height <- c(163, 177, 163, 162, 157)
 people <- cbind.data.frame(df,height)
 View(people)
@@ -592,13 +592,13 @@ my_list_full
 install.packages("downloader")
 library(downloader)
 
-url <- "https://raw.githubusercontent.com/genomicsclass/dagdata/master/inst/extdata/femaleMiceWeights.csv"
+url <- "./genomicsclass/dagdata/master/inst/extdata/femaleMiceWeights.csv"
 femaleMiceWeights <- "femaleMiceWeights.csv"
 download(url, femaleMiceWeights)
 mydata <- read.csv("femaleMiceWeights.csv")
 View(mydata)
 
-url<- "https://raw.githubusercontent.com/lukes/ISO-3166-Countries-with-Regional-Codes/master/all/all.csv"
+url<- "./lukes/ISO-3166-Countries-with-Regional-Codes/master/all/all.csv"
 all<- "all.csv"
 download(url, all)
 mydata <- read.csv("all.csv", stringsAsFactors=FALSE, check.names=FALSE)
@@ -871,7 +871,7 @@ View(newmydaya)
 newmurders %>% select (state, region, rate) %>% filter(rate <=0.1)
 newmurders %>% filter(rate <=0.1) %>% select (state, region, rate)
 
-##viii.arrange()??row?Æ¦C????(from Internet)
+##viii.arrange()??row?ïš¶C????(from Internet)
 View(newmurders)
 newmurders%>%arrange(population,region)
 
